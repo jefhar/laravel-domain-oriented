@@ -1,0 +1,12 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+parameters:
+    ignoreErrors:
+        - '#Method App\\Http\\Middleware\\Authenticate::redirectTo\(\) should return string\|null but return statement is missing.#'
+        - "#^Offset 'Illuminate…' does not exist on Illuminate\\\\Contracts\\\\Foundation\\\\Application\\.$#"
+        - '#Access to an undefined property Spatie\\DataTransferObject\\ImmutableDataTransferObject::\$[a-zA-Z0-9\\_]+\.#'
+        - '#Function factory invoked with [0-9] parameter[s]?, 0 required.#'
+    paths:
+        - app
+        - tests
+    level: 4
